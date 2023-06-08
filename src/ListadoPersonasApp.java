@@ -16,12 +16,19 @@ public class ListadoPersonasApp {
     var salir = false;
     while(!false){
         mostrarMenu();
+        try {
+            salir = ejecutarOperacion(consola, personas);
+        } catch(Exception e){
+            System.out.println("Ocurrió un error:" + e.getMessage());
+        }
+
+        System.out.println();
     } //fin while
     } //fin main
 
     private static void mostrarMenu(){
         //Mostramos las opciones
-        System.out.println("""
+        System.out.print("""
                 **** Listado Personas App ****
                 1. Agregar
                 2. Listar
