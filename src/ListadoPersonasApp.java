@@ -4,7 +4,7 @@
     FullStack con Angular, React y Spring Boot!
     https://www.udemy.com/course/aprende-java-en-13-dias-con-aplicaciones-del-mundo-real-spring/
  */
-public class Main {
+public class ListadoPersonasApp {
     public static void main(String[] args) {
 
     } //fin main
