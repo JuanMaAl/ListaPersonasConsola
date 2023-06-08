@@ -66,7 +66,9 @@ public class ListadoPersonasApp {
                 System.out.println("Hasta pronto...");
                 salir = true;
             }// fin caso 3
+            default -> System.out.println("Opción errónea: " + opcion);
         }// fin switch
+        return salir;
     }// fin ejecutarOperacion
 
 } // fin clase Main
