@@ -15,8 +15,18 @@ public class ListadoPersonasApp {
     //Empezamos con el menú
     var salir = false;
     while(!false){
-        
-    }
-
+        mostrarMenu();
+    } //fin while
     } //fin main
+
+    private static void mostrarMenu(){
+        //Mostramos las opciones
+        System.out.println("""
+                **** Listado Personas App ****
+                1. Agregar
+                2. Listar
+                3. Salir
+                """);
+        System.out.print("Proporciona la Opción: ");
+    }//fin mostrarMenu
 } // fin clase Main
