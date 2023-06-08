@@ -36,4 +36,16 @@ public class ListadoPersonasApp {
                 """);
         System.out.print("Proporciona la Opción: ");
     }//fin mostrarMenu
+
+    private static void ejecutarOperacion(Scanner consola, List<Persona> personas){
+        var opcion = Integer.parseInt(consola.nextLine());
+        var salir = false;
+        //Revisamos la opción proporcionada
+        switch(opcion){
+            case 1 -> {//Agregar persona a la lista
+
+            }
+        }//fin switch
+    }//fin ejecutarOperacion
+
 } // fin clase Main
