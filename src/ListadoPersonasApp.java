@@ -10,9 +10,9 @@ import java.util.Scanner;
 public class ListadoPersonasApp {
     public static void main(String[] args) {
     Scanner consola = new Scanner(System.in);
-    //Definimos la lista fuera del ciclo while
+    // Definimos la lista fuera del ciclo while
     List<Persona> personas = new ArrayList<>();
-    //Empezamos con el menú
+    // Empezamos con el menú
     var salir = false;
     while(!false){
         mostrarMenu();
@@ -23,11 +23,11 @@ public class ListadoPersonasApp {
         }
 
         System.out.println();
-    } //fin while
-    } //fin main
+    } // fin while
+    } // fin main
 
     private static void mostrarMenu(){
-        //Mostramos las opciones
+        // Mostramos las opciones
         System.out.print("""
                 **** Listado Personas App ****
                 1. Agregar
@@ -35,14 +35,14 @@ public class ListadoPersonasApp {
                 3. Salir
                 """);
         System.out.print("Proporciona la Opción: ");
-    }//fin mostrarMenu
+    }// fin mostrarMenu
 
     private static void ejecutarOperacion(Scanner consola, List<Persona> personas){
         var opcion = Integer.parseInt(consola.nextLine());
         var salir = false;
-        //Revisamos la opción proporcionada
+        // Revisamos la opción proporcionada
         switch(opcion){
-            case 1 -> {//Agregar persona a la lista
+            case 1 -> {// Agregar persona a la lista
                 // Entrada de los atributos de la persona por teclado
                 System.out.print("Proporciona el nombre: ");
                 var nombre = consola.nextLine();
@@ -50,14 +50,19 @@ public class ListadoPersonasApp {
                 var tel = consola.nextLine();
                 System.out.print("Proporciona el email: ");
                 var email = consola.nextLine();
-                //Crear el objeto tipo Persona
+                // Crear el objeto tipo Persona
                 var persona = new Persona(nombre, tel, email);
-                //Agregamos el objeto persona creado a la lista de personas
+                // Agregamos el objeto persona creado a la lista de personas
                 personas.add(persona);
                 System.out.println("La lista tiene: " + personas.size() + " elementos" );
             }//fin caso 1
-            
-        }//fin switch
-    }//fin ejecutarOperacion
+            case 2 -> {//Listar las personas
+                System.out.println("Listado de personas: ");
+                // Mejora usando lambda y método de referencia
+                // personas.forEach((persona) -> System.out.println(persona));
+                personas.forEach(System.out::println);
+            }// fin caso 2
+        }// fin switch
+    }// fin ejecutarOperacion
 
 } // fin clase Main
