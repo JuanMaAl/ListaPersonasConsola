@@ -14,7 +14,7 @@ public class ListadoPersonasApp {
     List<Persona> personas = new ArrayList<>();
     // Empezamos con el menú
     var salir = false;
-    while(!false){
+    while(!salir){
         mostrarMenu();
         try {
             salir = ejecutarOperacion(consola, personas);
@@ -37,7 +37,7 @@ public class ListadoPersonasApp {
         System.out.print("Proporciona la Opción: ");
     }// fin mostrarMenu
 
-    private static void ejecutarOperacion(Scanner consola, List<Persona> personas){
+    private static boolean ejecutarOperacion(Scanner consola, List<Persona> personas){
         var opcion = Integer.parseInt(consola.nextLine());
         var salir = false;
         // Revisamos la opción proporcionada
