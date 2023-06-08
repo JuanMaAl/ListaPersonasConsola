@@ -43,8 +43,20 @@ public class ListadoPersonasApp {
         //Revisamos la opción proporcionada
         switch(opcion){
             case 1 -> {//Agregar persona a la lista
-
-            }
+                // Entrada de los atributos de la persona por teclado
+                System.out.print("Proporciona el nombre: ");
+                var nombre = consola.nextLine();
+                System.out.print("Proporciona el teléfono: ");
+                var tel = consola.nextLine();
+                System.out.print("Proporciona el email: ");
+                var email = consola.nextLine();
+                //Crear el objeto tipo Persona
+                var persona = new Persona(nombre, tel, email);
+                //Agregamos el objeto persona creado a la lista de personas
+                personas.add(persona);
+                System.out.println("La lista tiene: " + personas.size() + " elementos" );
+            }//fin caso 1
+            
         }//fin switch
     }//fin ejecutarOperacion
 
